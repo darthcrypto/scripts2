@@ -23,6 +23,10 @@ quote_of_the_day = '"'+quoteparser1+'"'+" \n -"+quoteparser2
 
 print quote_of_the_day
 
+f = open( 'test.txt', 'w')
+f.write (quote_of_the_day)
+f.close()
+
 #ok so this worked on 3/17 when you take inspect the element of "quote of the day" that's beside the other quotes at the bottom of the webpage
 
 
