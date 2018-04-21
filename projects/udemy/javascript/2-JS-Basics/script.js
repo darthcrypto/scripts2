@@ -223,7 +223,7 @@ if (john.indexOf('teacher') === -1) {
 
 //////////////////////////////
 // Lecture: Objects and Properties
-
+/*
 var array = [1,2,3];
 array[0];
 
@@ -236,9 +236,26 @@ var john = {
 	last: 'Smith',
 	yearOfBirth: 1990,
 	job: 'teacher',
-	isMarried: false
+	isMarried: false,
+	family: ['Jane', 'Mark', 'Bob'],
+	calculateAge: function() {
+		this.age = 2016 - this.yearOfBirth;
+	}
 };
 
+
+john.calculateAge();
+console.log(john);
+*/
+/*
+console.log(john.calculateAge(1990));
+console.log(john.calculateAge());
+
+var age = john.calculateAge();
+john.age = age;
+
+console.log(john);
+/*
 console.log(john.last);
 console.log(john['last']);
 
@@ -258,6 +275,62 @@ jane['job'] = 'retired';
 jane['isMarried'] = true;
 
 console.log(jane);
+*/
+
+
+
+
+
+
+
+/////////////////////////
+// Lecture: Loops
+/*
+for (var i = 0; i < 10; i++) {
+	console.log(i)
+}
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+for (var i = 4; i > -1; i--) {
+	console.log(names[i]);
+}
+*/
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+var i = 0;
+while (i < names.length) {
+	console.log(names[i]);
+	i++;
+}
+
+
+for (var i = 1; i <= 5; i++) {
+	console.log(i);
+
+	if (i === 3) {
+		continue;
+	}
+        
+	console.log(i);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
