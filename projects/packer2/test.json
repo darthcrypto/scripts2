@@ -1,6 +1,6 @@
 {
   "variables": {
-    "iso": "file:///root/scripts/projects/packer2/iso/CentOS-7-x86_64-Minimal-1708.iso",
+    "iso": "file:///root/Desktop/deskstuff/CentOS-7-x86_64-Minimal-1708.iso",
     "checksum": "bba314624956961a2ea31dd460cd860a77911c1e0a56e4820a12b9c5dad363f5"
   },
   "builders": [
