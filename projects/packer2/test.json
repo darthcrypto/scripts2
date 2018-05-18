@@ -27,5 +27,6 @@
       ],
       "shutdown_command": "/sbin/halt -p"
     }
-  ]
+  ],
+   "post-processors": ["vagrant"]	  
 }
