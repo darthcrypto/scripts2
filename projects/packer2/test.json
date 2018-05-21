@@ -28,5 +28,11 @@
       "shutdown_command": "/sbin/halt -p"
     }
   ],
+   "provisioners": [
+     {
+      "type": "shell",
+      "script": "installer.sh"
+     }
+   ],  
    "post-processors": ["vagrant"]	  
 }

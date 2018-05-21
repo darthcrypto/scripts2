@@ -1,0 +1,3 @@
+/*     #["modifyvm", "{{.Name}}", "--nic2", "hostonly"],
+ 23          ["modifyvm", "{{.Name}}", "--cableconnected2", "on"]
+
