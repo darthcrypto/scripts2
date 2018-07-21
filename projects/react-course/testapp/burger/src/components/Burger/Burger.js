@@ -11,6 +11,7 @@ const burger = ( props ) => {
                return <BurgerIngredients key={igKey + i} type={igKey} />;
         });
     });
+    
     return (
         <div className={classes.Burger}>
             <BurgerIngredients type="bread-top" />
