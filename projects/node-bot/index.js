@@ -12,16 +12,16 @@ app.listen(8000, () => {
 });
 
 
-/* variables
+/////////// variables/////////////
 var repo = req.body.name.repo
 var branch = req.body.name.repo
-*/
+//////////////////////////////////
 
-/////////////working git wrapper
+/////////////working git wrapper//////////////////////
 git().clone('https://github.com/darthcrypto/scripts2.git', '--branch', 'test')
 
 //////////////////////////////////
-//parse a pom
+//parse a pom////////////////////
 const opts = {
   filePath: "./pom.xml", 
 };
