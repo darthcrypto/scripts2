@@ -17,5 +17,4 @@ var repo = req.body.name.repo
 var branch = req.body.name.repo
 */
 
-git().clone('https://github.com/darthcrypto/scripts2.git').checkoutBranch('
-
+git().clone('https://github.com/darthcrypto/scripts2.git', {'--branch': 'test'}).checkout('test', 'master')
