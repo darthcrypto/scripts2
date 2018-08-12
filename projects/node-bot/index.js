@@ -48,6 +48,8 @@ console.log(pomstuff);
 ///////////////////////////////////////////
 */
 
+
+//////////////////////semantic versioning/////////////////////
 var branch = "feature/SA-56-major";
 var version = "1.0.0-SNAPSHOT";
 var branchsplit = branch.split('-');
@@ -60,20 +62,19 @@ console.log(versionsplit[0]);
 
 
 if (branchsplit[2] == "patch") {
-  console.log("Hey this is a patch upgrade to the pom");
+  console.log("This is a patch upgrade to the pom.");
   const semincrease = semver.inc(versionsplit[0], 'patch');
-  console.log("The new verison is " + versionsplit[0]);
-  console.log("This is a patch semantic increase: " + semincrease);
+  console.log("The semantic version has been increased to: " + semincrease);
 }
 else if (branchsplit[2] == "minor") {
-  console.log("Hey this a minor upgrade to the pom");
+  console.log("This is a minor upgrade to the pom");
   const semincrease = semver.inc(versionsplit[0], 'minor');
-  console.log("This is a minor semantic increase: " + semincrease);
+  console.log("The semantic version has been increased to: " + semincrease);
 }
 else if (branchsplit[2] == "major") {
-  console.log("Hey this a major upgrade");
+  console.log("This a major upgrade to the pom");
   const semincrease = semver.inc(versionsplit[0], 'major');
-  console.log("This is a major semantic increase: " + semincrease);
+  console.log("The semantic version has been increased to: " + semincrease);
 
 }
 else {
@@ -83,9 +84,4 @@ else {
 
 
 
-/*
-if anywhere in branch it says patch:
-     get rid of SNAPSHOT in version
-     bump the patch number in version with semantic version library
-     console.log(version)
-*/
+/////////////how to do git commit
