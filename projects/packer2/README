@@ -1,7 +1,0 @@
-http://softwaretester.info/create-simple-centos-7-virtualbox-with-packer/
-
-to start Vagrant box:
-
-vagrant box add test <vagrantboxfile>
-vagrant init test
-vagrant up
