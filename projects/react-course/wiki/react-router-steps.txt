@@ -1,0 +1,135 @@
+Steps for setting up routing in react
+
+If you need to look at example code, got to testapp3:
+/root/scripts/projects/react-course/testapp/testapp3/testapp3
+-------------------------------------------------
+
+1) download react-routing package: "npm install react-router-dom"
+--------------------------------------------------------------------------
+2) in ./src/index.js add:  "import { BrowerRouter as Router } from "react-router-dom"
+
+#remember that index.js is the entry point for our app. the build pulls this file first
+------------------------------------------------------------------------
+3)in ./src/index.js change:
+
+ReactDOM.render(<App />, rootNode);
+
+to
+
+ReactDOM.render(<Router>
+    <App />
+        </Router>, rootNode);
+
+#this step adds router capablities to our app
+---------------------------------------------------------------------
+4) go to the .js file that has the html with the href link, add:
+
+import { Link, Route, Switch } from "react-router-dom";
+---------------------------------------------------------------------
+5) change the "a" (anchor tag) to "Link" and "href" parameter to "to" as such:
+
+OLD:
+     <li className="nav-item mx-0 mx-lg-1">
+              <a
+                className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                href="#emp"
+              >Employee
+              </a>
+            </li>
+
+NEW:
+     <li className="nav-item mx-0 mx-lg-1">
+              <Link
+                className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                to="#emp"
+              >Employee
+              </Link>
+            </li>
+-------------------------------------------------------------------
+6) You have a single page application, but in react any additional pages
+you create must be components. Create a "components" folder in the src directory", make sure app.js is in there too.
+
+directory structure should look like this:
+
+-node_modules
+	-module1
+	-module2
+	-module3
+-public
+	-index.html
+-src
+	-components
+		-app.js
+		-page1.js
+		-page2.js
+	-index.js
+	-css
+		-style1.css
+		-style2.css
+-----------------------------------------------------------------------
+7) so I am going to add an AboutUs page by making a file named AboutUs.js in ./src/components/AboutUs.js:
+
+import React from 'react';
+
+class AboutUs extends React.Component {
+    render() {
+        return (<h1>WeAreCool</h1>);
+    }
+}
+
+export default AboutUs;
+
+------------------------------------------------------------
+8) go back to app.js and import the AboutUs.js:
+
+import AboutUs from "./AboutUs";
+-----------------------------------------------------------
+9) add the route path to the html of the class as shown below:
+(look for this: "<Route path="/emp" component={AboutUs} />")
+
+
+class Header extends React.Component {
+  render() {
+    return (<nav
+      className="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+      id="mainNav"
+    >
+      <div className="container">
+        <a className="navbar-brand js-scroll-trigger" href="#page-top">Employee Management</a>
+        <div className="" id="navbarResponsive">
+          <ul className="navbar-nav">
+            <li className="nav-item mx-0 mx-lg-1">
+              <Link
+                className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                to="/emp"
+              >Employee
+              </Link>
+            </li>
+            <li className="nav-item mx-0 mx-lg-1">
+              <a
+                className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                href="#dept"
+              >Department
+              </a>
+            </li>
+            <li className="nav-item mx-0 mx-lg-1">
+              <a
+                className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                href="#login"
+              >Login
+              </a>
+            </li>
+          </ul>
+          <Route path="/emp" component={AboutUs} />
+        </div>
+      </div>
+            </nav>);
+  }
+}
+
+
+
+****STUCK HERE....need to think about routing this in different way because i have app.js which is believe is also displaying shit at all times so just editing header.js aint doing much
+--------------------------------------------------------------------
+
+
