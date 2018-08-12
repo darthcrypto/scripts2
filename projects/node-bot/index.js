@@ -81,7 +81,12 @@ else {
   console.log("The branch is not formatted correctly. EXIT.")
 }   
 
-
-
-
 /////////////how to do git commit
+git().commit("This is a test commit to bump the semantic version");
+
+
+////////how to do a git push
+git().push('https://github.com/darthcrypto/scripts2.git', 'test');
+
+
+///adding git credentials
