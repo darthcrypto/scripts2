@@ -15,15 +15,20 @@ spec:
 
 ---
 
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gateway
+  name: app-deployment
   labels:
-    app: api-gateway
+    app: app-deployment
     type: production
-  
-  spec:
+
+spec:
     containers:
     - name: api-gateway
       image: 
+      ports:
+      - containerPort: 80
+      labels:
+        app: api-gateway
+        type: production

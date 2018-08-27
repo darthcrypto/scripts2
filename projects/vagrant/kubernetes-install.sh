@@ -42,3 +42,5 @@ kubectl create serviceaccount cluster-admin-dashboard-sa
 
 kubectl create clusterrolebinding cluster-admin-dashboard-sa --clusterrole=cluster-admin --serviceaccount=default:cluster-admin-dashboard-sa
 
+#untaint master node so pods can be deployed
+kubectl taint nodes --all node-role.kubernetes.io/master-
